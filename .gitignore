@@ -1,0 +1,13 @@
+# 编辑器 / IDE
+.idea/
+.vscode/
+*.iml
+
+# 依赖与构建产物
+node_modules/
+dist/
+*.tsbuildinfo
+
+# 系统与杂项
+.DS_Store
+*.log

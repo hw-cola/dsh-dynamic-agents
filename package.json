@@ -1,0 +1,34 @@
+{
+  "name": "@dsh/dynamic-agents",
+  "description": "动态AGENTS.md：输入框上方 Dock 的「上下文」下拉多选控件，按工作区维护可勾选的动态上下文规则，注入会话系统提示；同工作区新会话沿用上次勾选；会话开始后仍固定在输入框上方并锁定编辑、解锁需确认。",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime"
+      ],
+      "platform": "web"
+    }
+  },
+  "license": "MIT"
+}
