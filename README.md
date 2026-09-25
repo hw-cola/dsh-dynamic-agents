@@ -8,9 +8,10 @@ DSH Web 动态上下文插件：在聊天输入框上方 Dock 提供「动态AGE
 
 输入框上方 Dock 常驻一个「动态AGENTS.md」下拉按钮，始终可见（会话开始前、中、后均不消失），并显示当前已勾选数量徽标：
 
-- 面板分「全局」与「当前工作区」两组，各自支持勾选、新增、删除（二次确认）、查看完整内容；
+- 面板分「全局」与「当前工作区」两组，各自支持勾选、全选/取消全选、新增、删除（二次确认）、查看完整内容；
 - 新增规则需填写名称与内容，名称保存后即注入会话系统提示，无需重启；
-- 面板自适应定位：窗口缩放、滚动或内容变化时自动保持在视口内，手机端下同样可用。
+- 面板自适应定位：窗口缩放、滚动或内容变化时自动保持在视口内，手机端下同样可用；
+- 视觉与交互对齐 DSH 官方风格：面板卡片与官方菜单同款设计令牌，按钮、输入框直接使用官方组件，面板 portal 到顶层并可叠于模态弹窗之上，支持 Escape 关闭。
 
 ### 功能二：两级规则库（全局共享 + 工作区独立）
 
@@ -44,13 +45,13 @@ dsh plugin --profile web add "git+https://github.com/hw-cola/dsh-dynamic-agents.
 钉到指定版本（按 tag 锁定）：
 
 ```sh
-dsh plugin --profile web add "git+https://github.com/hw-cola/dsh-dynamic-agents.git#v1.0.0"
+dsh plugin --profile web add "git+https://github.com/hw-cola/dsh-dynamic-agents.git#v1.1.0"
 ```
 
 ### 本地开发
 
 ```sh
-dsh plugin --profile web add "link:${PATH}/dsh-dynamic-agents"
+dsh plugin --profile web add "link:D:/CodingWorkspace/github/dsh-plugins/dsh-dynamic-agents"
 ```
 
 > `${PATH}`为下载源码的路径
@@ -78,4 +79,4 @@ dsh plugin --profile web remove @dsh/dynamic-agents
 
 > 卸载不会自动删除数据文件：全局规则库（`~/.dsh/dynamic-agents.json`）与工作区规则库（`<工作区>/.dsh/dynamic-agents.json`）需手动清理。
 
-> 兼容性：插件在 DSH `0.1.1-rc.2` 上开发测试。客户端 API 仍在迭代，DSH 大版本升级后若功能异常，请检查本仓库是否有对应适配版本。
+> 兼容性：插件在 DSH `0.1.7-rc.1` 上开发测试。客户端 API 仍在迭代，DSH 大版本升级后若功能异常，请检查本仓库是否有对应适配版本。
