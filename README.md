@@ -45,13 +45,13 @@ dsh plugin --profile web add "git+https://github.com/hw-cola/dsh-dynamic-agents.
 钉到指定版本（按 tag 锁定）：
 
 ```sh
-dsh plugin --profile web add "git+https://github.com/hw-cola/dsh-dynamic-agents.git#v1.1.0"
+dsh plugin --profile web add "git+https://github.com/hw-cola/dsh-dynamic-agents.git#v1.1.1"
 ```
 
 ### 本地开发
 
 ```sh
-dsh plugin --profile web add "link:D:/CodingWorkspace/github/dsh-plugins/dsh-dynamic-agents"
+dsh plugin --profile web add "link:${PATH}/dsh-dynamic-agents"
 ```
 
 > `${PATH}`为下载源码的路径
