@@ -3,7 +3,7 @@
 # 一行双面：Host 半区（本包 main 入口）维护按工作区持久化的上下文库与勾选，
 # 通过 systemPrompt section 注入会话系统提示，并经 webServer JSON route
 # （POST /dsh-dynamic-agents/api）为浏览器半区提供增删改查；浏览器半区
-# （dsh.client）在输入框上方 Dock 注册「上下文」下拉多选控件。
+# （dsh.client）在空白会话的 New Session 行注册「动态AGENTS.md」下拉多选控件。
 #
 # Web-surface only：行注入 webServer，仅 web 组成提供。安装进 web profile
 # （依赖 + dsh.profile.bundles 见 profile package.json）。
